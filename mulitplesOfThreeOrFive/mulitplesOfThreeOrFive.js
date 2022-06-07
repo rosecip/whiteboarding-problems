@@ -7,5 +7,3 @@ const mulitplesOfThreeOrFive = (number) => {
   }
   return answer
 }
-
-
