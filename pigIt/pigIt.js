@@ -2,7 +2,11 @@ const pigIt = (str) => {
   let strArr = str.split(" ")
   let finalArr = []
   for (let i = 0; i < strArr.length; i++) {
-    finalArr.push(strArr[i].slice(1) + strArr[i].slice(0, 1) + "ay")
+    if (strArr[i].match(/[a-z]/i)) {
+      finalArr.push(strArr[i].slice(1) + strArr[i].slice(0, 1) + "ay")
+    } else {
+      finalArr.push(strArr[i])
+    }
   }
   return finalArr.join(" ")
 }
